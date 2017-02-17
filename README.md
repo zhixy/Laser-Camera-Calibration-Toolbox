@@ -6,17 +6,15 @@ The origin toolbox is a little out of date. The main problem is that it illustra
 # How to use the toolbox?
 The toolbox is easy to use. As mentioned before, I don't modify a lot, so most steps is identical to origin toolbox, the user can refer to technical report in this repo. The diffrence appears when the user clicks the "select plane" button. Firstly, the user will be prompted to input the index of laser files, this is same to origin toolbox. After that, another sentence will appear, asking the user to choose wich kinds method to select points. Yes, I reserve the origin range image method and add my new method. If the user select range image method, the procedure is identical to origin toolbox. However, if the user chooses the new method, there will be a differnt procedure: A figure window will pop up, just like the following figure. Firstly, the user can rotate and scale the 3D point cloud to clearly focus on the checkboard plane, secondly, enable the "data cursor" on the toolbar, and then click on the point cloud to select one point in the checkboard plane. Please try your best to select the centric point. Afterwards, the user clicks "continue" button, and the selected plane points will be shown in the same figure. If the user satisifies with the plane, clicks "continue" button again to go to next point cloud, otherwise, clicks "back" and goes back to select another point. 
 
-![Screenshot]
+![Screenshot] (./Screenshot.png)
 
 # What is the theory of the toolbox?
 As mentioned in the technical report written by the authors of the toolbox, the technique used in this toolbox was conceived and developed independently of the near identical work by Q. Zhang and R. Pless [1] presented in IROS 2004.
 
-[Screenshot]: Screenshot.png "Screenshot" { width:auto; max-width:90% }
-
 [Laser-Camera Calibration Toolbox]: http://www.cs.cmu.edu/~ranjith/lcct.html
 
 
-## References   {-}
+## References   
 
 [1] Q. Zhang and R. Pless, “Extrinsic calibration of a camera and laser range finder (improves camera calibration),” in Intelligent Robots and Systems, 2004.(IROS 2004). Proceedings. 2004 IEEE/RSJ International Conference on, 2004, vol. 3, pp. 2301–2306.
 
