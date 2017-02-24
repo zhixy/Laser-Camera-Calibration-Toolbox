@@ -8,7 +8,7 @@ The toolbox is easy to use. As mentioned before, I don't modify a lot, so most s
 
 ![Screenshot] (./Screenshot.png)
 
-# What is the theory of the toolbox?
+# Methodology
 As mentioned in the technical report written by the authors of the toolbox, the technique used in this toolbox was conceived and developed independently of the near identical work by Q. Zhang and R. Pless [1] presented in IROS 2004.
 
 [Laser-Camera Calibration Toolbox]: http://www.cs.cmu.edu/~ranjith/lcct.html
