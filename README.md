@@ -17,6 +17,7 @@ As mentioned in the technical report written by the authors of the toolbox, the 
 ## References   
 
 [1] Q. Zhang and R. Pless, “Extrinsic calibration of a camera and laser range finder (improves camera calibration),” in Intelligent Robots and Systems, 2004.(IROS 2004). Proceedings. 2004 IEEE/RSJ International Conference on, 2004, vol. 3, pp. 2301–2306.
+
 [2] F. Vasconcelos, J. P. Barreto, and U. Nunes, “A Minimal Solution for the Extrinsic Calibration of a Camera and a Laser-Rangefinder,” IEEE Transactions on Pattern Analysis and Machine Intelligence, vol. 34, no. 11, pp. 2097–2107, Nov. 2012.
 
 
