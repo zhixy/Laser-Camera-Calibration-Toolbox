@@ -328,10 +328,18 @@ for i=1:length(ind_preview)
     nvalid=nvalid+1;
     preview_filenames{nvalid}=[handles.scanBaseName int2str(ind_preview(i)) '.' handles.scanSuffix];
 end
+
+r_or_p = input('use range image (r) or 3D point cloud (p) to select checkboard plane? (default:p): ','s');
+
 disp('Starting range image viewer... please wait');
 % View range images in preview mode
-temp=view_range_image(preview_filenames,0,[],1,10);
-delete(temp);
+
+if strcmp(r_or_p,'r')
+    temp=view_range_image(preview_filenames,0,[],1,10);
+    delete(temp);
+else
+    preview_point_cloud(preview_filenames);
+end
 
 % =========================================================================
 % --- Executes on button press in select_planes_bn.

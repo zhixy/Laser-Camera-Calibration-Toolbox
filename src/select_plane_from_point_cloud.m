@@ -8,39 +8,26 @@ h = uicontrol('Position',[20 20 100 40],'String','Continue',...
 h1 = uicontrol('Position',[220 20 100 40],'String','back',...
               'Enable','off','Callback',@back_callback);
           
-point = cell(1,numel(preview_filenames));
 for i=1:numel(preview_filenames)
     disp(preview_filenames{i});
     done = 0;
-    str = strsplit(preview_filenames{i},'.');
-    if strcmp(str{numel(str)},'ply')
-        pc = pcread(preview_filenames{i});
-    else
-        pc = pointCloud(importdata(preview_filenames{i}));
-    end
+    pc = import_point_cloud_from_file(preview_filenames{i});
     pcshow(pc);
+    title(preview_filenames{i}, 'interpreter', 'none');
     
     uiwait(gcf);
    
 end
 close(gcf);
 
-% for i=1:length(ind_preview)
-%     [theta,alpha,minError]=tls_robust(pc_in_plane{ind_preview(i)});
-%     handles.user_selected_planes{ind_preview(i)}.theta = theta;
-%     handles.user_selected_planes{ind_preview(i)}.alpha = alpha;
-%     handles.user_selected_planes{ind_preview(i)}.e = minError;
-%     handles.user_selected_planes{ind_preview(i)}.inliers = pc_in_plane{ind_preview(i)};
-% end
 
 function continue_callback(objectHandle , eventData )
     if done == 0
         cur_info = getCursorInfo(dcm_obj);
         if isfield(cur_info,'Position')
-            point{i} = cur_info.Position;
             arrayPos=find(handles.active_image_numbers==ind_preview(i));
             
-            [theta, alpha, minError, inliers] = ObtainPlanePoint(pc.Location,point{i});
+            [theta, alpha, minError, inliers] = ObtainPlanePoint(pc.Location,cur_info.Position);
 %             [theta,alpha,minError] = tls_robust(inliers);
             handles.user_selected_planes{arrayPos}.theta = theta;
             handles.user_selected_planes{arrayPos}.alpha = alpha;
