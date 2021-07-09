@@ -1,4 +1,5 @@
-**deprecated**, I will not maintain this any more, and the users are recommanded to [Multical](https://github.com/zhixy/multical) for Laser-camera calibration.
+# deprecated！
+I will not maintain this any more, and the users are recommanded to [Multical](https://github.com/zhixy/multical) for Laser-camera calibration.
 
 # Laser-Camera-Calibration-Toolbox
 This toolbox is a simple extension of the [Laser-Camera Calibration Toolbox] developed by Ranjith Who was at CMU. Thank you for the authors!
